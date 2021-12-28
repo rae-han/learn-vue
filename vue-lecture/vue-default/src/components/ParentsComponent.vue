@@ -17,10 +17,12 @@ export default {
     onParentsClick() {
       this.$refs.child_component.$refs.child_btn.click();
       this.$refs.child_component.childMethod();
+      this.$refs.child_component.msg = 'parents msg';
     }
   }
 }
 </script>
+
 <style lang="">
   
 </style>
