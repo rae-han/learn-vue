@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <ParentsComponent></ParentsComponent>
+    <CountComponent></CountComponent>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -10,12 +11,14 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
 import ParentsComponent from '@/components/ParentsComponent.vue';
+import CountComponent from '@/components/CountComponent.vue';
 
 export default {
   name: 'Home',
   components: {
     HelloWorld,
     ParentsComponent,
+    CountComponent,
   }
 }
 </script>
