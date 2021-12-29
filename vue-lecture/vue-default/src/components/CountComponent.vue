@@ -1,9 +1,10 @@
 <template>
   <div>
     <h1>Count Component</h1>
-    <h2>Count: {{count}}</h2>
+    <h2>CounputedCount: {{counputedCount}}</h2>
     <h2>MapCount: {{mapStateCount}}</h2>
-    <h2>countAlias: {{countAlias}}</h2>
+    <h2>CountAlias: {{countAlias}}</h2>
+    <h2>computedDoubleCount: {{computedDoubleCount}}</h2>
     <button @click="increment">increament</button>
   </div>
 </template>
@@ -15,10 +16,13 @@ export default {
   computed: {
     ...mapState({
       mapStateCount: state => state.count,
-      countAlias: 'count'
+      countAlias: 'count',
     }),
-    count() {
+    counputedCount() {
       return this.$store.state.count;
+    },
+    computedDoubleCount() {
+      return this.$store.getters.doubleCount;
     }
   },
   methods: {
