@@ -1,8 +1,15 @@
 import {createStore} from 'vuex';
 
+import todos from './modules/todos'
+
 const store = createStore({
-  state: {
-    count: 0
+  modules: {
+    todos
+  },
+  state() {
+    return {
+      count: 0
+    }
   },
   getters: {
     doubleCount(state) {
