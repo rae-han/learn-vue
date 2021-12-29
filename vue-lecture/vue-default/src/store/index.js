@@ -13,7 +13,10 @@ const store = createStore({
     increment(state) {
       state.count = state.count+1;
     }
-  }
+  },
+  actions: {
+
+  },
 })
 
 export default store;
