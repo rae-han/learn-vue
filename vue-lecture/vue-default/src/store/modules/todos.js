@@ -30,10 +30,25 @@ const moduleTodos = {
   mutations: {
     addDot(state, id) {
       state.todos = state.todos.map(todo => todo.id === id ? { ...todo, name: `${todo.name}.`} : todo);
+    },
+    insertTodoItem(state, todo) {
+      state.todos = state.todos.concat(todo);
     }
   },
   actions: {
+    insertTodo(context, name) {
+      console.log(context);
 
+      const id = context.state.todos[context.state.todos.length-1].id+1;
+
+      const newTodo = {
+        id,
+        done: false,
+        name,
+      }
+      
+      context.commit('insertTodoItem', newTodo);
+    }
   }
 }
 

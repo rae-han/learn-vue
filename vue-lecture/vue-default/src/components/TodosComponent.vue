@@ -50,11 +50,15 @@ export default {
     ...mapMutations({
       addDot: 'todos/addDot'
     }),
+    ...mapActions({
+      insertTodo: 'todos/insertTodo'
+    }),
     attachDot(id) {
       this.addDot(id);
     },
-    inputTodo(id) {
-      console.log(this.todo)
+    inputTodo() {
+      const name = this.todo;
+      this.insertTodo(name);
     }
   }
 }
