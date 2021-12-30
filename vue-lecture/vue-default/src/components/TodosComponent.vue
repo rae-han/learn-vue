@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div>{{computedTodos}}</div>
+    <div>computedTodos: {{computedTodos}}</div>
+    <!-- <div>computedGettersTodos: {{computedGettersTodos}}</div> -->
   </div>
 </template>
 
@@ -13,11 +14,12 @@ export default {
     }),
     computedTodos() {
       return this.$store.state.todos.todos
+    },
+    computedGettersTodos() {
+      return this.$store.getters.todos.doneTodos;
     }
   },
   created() {
-    console.log(this.$store.state.todos)
-    console.log(this.computedTodos);
   }
 }
 </script>

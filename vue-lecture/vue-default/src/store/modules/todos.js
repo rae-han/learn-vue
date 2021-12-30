@@ -8,7 +8,7 @@ const moduleTodos = {
     ]
   }),
   getters: {
-
+    doneTodos: state => state.todos.filter(todo => todo.done),
   },
   mutations: {
 
