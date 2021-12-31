@@ -15,7 +15,7 @@ import { mapState } from 'vuex';
 export default {
   computed: {
     ...mapState({
-      mapStateCount: state => state.count,
+      mapStateDoubleCount: state => state.count*2,
       countAlias: 'count',
     }),
     ...mapState(['count']),
